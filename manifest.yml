@@ -1,0 +1,14 @@
+applications:
+- path: .
+  memory: 1920M
+  instances: 1
+  domain: mybluemix.net
+  name: chunzime
+  host: chunzime
+  disk_quota: 1024M
+  services:
+  - mypostgres
+  - Document Conversion-yb
+  - Conversation-7m
+  buildpack: python_buildpack
+  command: bash ./run.sh
